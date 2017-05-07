@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>yummy pure CSS circular reveal</title>
+  <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><script>const ID = 'gtjcV-6JlQE'</script>
+  
+  <link rel='stylesheet prefetch' href='css/evpbxv.css'>
+
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      :not(a) {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+}
+
+body {
+  background: #aaa;
+}
+
+h2, .inf {
+  font: 1.5em/2 cookie, cursive;
+  text-align: center;
+}
+
+h2 {
+  box-shadow: 0 1px 5px rgba(34, 34, 34, 0.5);
+  background: #fdfdfd;
+  font-size: 2.5em;
+  color: #D9B2FF;
+  text-shadow: 1px 1px 1px #222;
+}
+
+.card {
+  margin: 1em auto;
+  width: 21.5em;
+  box-shadow: 0 1px 3px rgba(34, 34, 34, 0.7);
+  background: #fdfdfd;
+  font: 1em/ 2 trebuchet ms, tahoma, verdana, sans-serif;
+}
+
+header {
+  position: relative;
+  height: 12.5em;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/17_04_bg_easter.jpg) 50%/cover;
+  color: #fdfdfd;
+}
+header :not(button):not(svg) {
+  position: absolute;
+}
+
+input {
+  position: absolute;
+  left: -100vw;
+}
+input:checked ~ nav {
+  --r: 24.86966em;
+}
+input:checked ~ label {
+  background: #fdfdfd;
+  color: #2ad;
+}
+input:checked ~ label .slider {
+  transform: translatey(-50%);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #2ad;
+  clip-path: circle(var(--r, 0) at calc(100% - 3rem) 100%);
+  transition: clip-path 0.35s ease-out;
+}
+
+button, label {
+  cursor: pointer;
+}
+
+button {
+  align-self: center;
+  border: solid 1px;
+  width: 10.75em;
+  border-radius: 5px;
+  background: rgba(253, 253, 253, 0);
+  color: #fdfdfd;
+  transition: 0.35s;
+}
+button:hover, button:focus, button:active {
+  background: #fdfdfd;
+  color: #2ad;
+}
+
+label {
+  overflow: hidden;
+  right: 1.5rem;
+  bottom: -1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(34, 34, 34, 0.4);
+  background: #2ad;
+  font-size: 0;
+  transition: background 0.35s ease-out;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: .625rem;
+  width: 100%;
+  height: 200%;
+  transition: transform 0.35s cubic-bezier(0.65, 0.68, 0.34, 1.42);
+}
+
+svg {
+  fill: currentcolor;
+  stroke: currentcolor;
+  stroke-linecap: round;
+}
+
+.descr {
+  padding: 2em;
+  line-height: 1.4;
+}
+
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  
+<h2>yummy pure CSS circular reveal</h2>
+<p class="inf">(click the twitter icon)</p>
+<section class="card">
+  <header>
+    <input type="checkbox" id="show"/>
+    <nav>
+      <button>gingerbread</button>
+      <button>brownie</button>
+      <button>macaroon</button>
+    </nav>
+    <label for="show">show
+      <div class="slider">
+        <svg viewBox="0 0 1584 1584">
+          <path d="M1584 308q-67 98-162 167a915 915 0 0 1-1412 819q280 15 478-137-230-16-303-223 75 9 145-7-253-61-258-320 75 41 145 39-223-175-100-430 280 320 670 337a320 320 0 0 1 547-293q130-30 207-79-50 130-143 178 90-13 184-50"></path>
+        </svg>
+        <svg viewBox="-4 -4 8 8">
+          <path d="m-2-2 4 4m0-4-4 4"></path>
+        </svg>
+      </div>
+    </label>
+  </header>
+  <section class="descr">
+    <p>Wafer plum macaroon pie lemon. Plum soufflé brownie. Biscuit toffee. Marzipan wafer cake brownie. Lemon ice cream. Cupcake chocolate bar. Liquorice cake wafer apple pie pudding lemon. Macaroon gingerbread apple pie. Wafer cake toffee donut pudding. Marzipan tart cake gingerbread. Cake dessert brownie. Ice cream cookie. Dessert liquorice plum soufflé.</p>
+  </section>
+</section>
+  <script src='https://codepen.io/thebabydino/pen/evPbxv.js'></script>
+
+  
+</body>
+</html>

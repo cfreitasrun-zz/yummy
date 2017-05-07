@@ -1,0 +1,121 @@
+$c: #222 #fdfdfd #2ad;
+$w: 21.5em;
+$h: 12.5em;
+$d: 3rem;
+$t: .35s;
+
+:not(a) {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	color: inherit;
+	font: inherit;
+}
+
+body { background: #aaa }
+
+h2, .inf {
+	font: 1.5em/2 cookie, cursive;
+	text-align: center;
+}
+
+h2 {
+	box-shadow: 0 1px 5px rgba(nth($c, 1), .5);
+	background: nth($c, 2);
+	font-size: 2.5em;
+	color: #D9B2FF;
+	text-shadow: 1px 1px 1px nth($c, 1);
+}
+
+.card {
+	margin: 1em auto;
+	width: $w;
+	box-shadow: 0 1px 3px rgba(nth($c, 1), .7);
+	background: nth($c, 2);
+	font: 1em/ 2 trebuchet ms, tahoma, verdana, sans-serif;
+}
+
+header {
+	position: relative;
+	height: $h;
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/17_04_bg_easter.jpg) 50%/ cover;
+	color: nth($c, 2);
+	
+	:not(button):not(svg) { position: absolute }
+}
+
+input {
+	position: absolute;
+	left: -100vw;
+	
+	&:checked {
+		& ~ nav {
+			--r: sqrt(pow($w, 2) + pow($h, 2));
+		}
+		
+		& ~ label {
+			background: nth($c, 2);
+			color: nth($c, 3);
+			
+			.slider { transform: translatey(-50%) }
+		}
+	}
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background: nth($c, 3);
+	clip-path: circle(var(--r, 0) at calc(100% - #{$d}) 100%);
+	transition: clip-path $t ease-out
+}
+
+button, label { cursor: pointer }
+
+button {
+	align-self: center;
+	border: solid 1px;
+	width: .5*$w;
+	border-radius: 5px;
+	background: rgba(nth($c, 2), 0);
+	color: nth($c, 2);
+	transition: $t;
+	
+	&:hover, &:focus, &:active {
+		background: nth($c, 2);
+		color: nth($c, 3);
+	}
+}
+
+label {
+	overflow: hidden;
+	right: .5*$d; bottom: -.5*$d;
+	width: $d; height: $d;
+	border-radius: 50%;
+	box-shadow: 0 1px 2px rgba(nth($c, 1), .4);
+	background: nth($c, 3);
+	font-size: 0;
+	transition: background $t ease-out
+}
+
+.slider {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: .625rem;
+	width: 100%; height: 200%;
+	transition: transform $t cubic-bezier(.65,.68,.34,1.42);
+}
+
+svg {
+	fill: currentcolor;
+	stroke: currentcolor;
+	stroke-linecap: round;
+}
+
+.descr {
+	padding: 2em;
+	line-height: 1.4;
+}
